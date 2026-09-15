@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanksha & Swapnil | Wedding Invitation</title>
+    <meta name="description"
+        content="With the blessings of our parents, we invite you to celebrate our special day with us.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop preload="auto" autoplay>
+        <!-- Local wedding audio loop -->
+        <source src="bg_music.webm" type="audio/webm">
+    </audio>
+
+    <!-- Floating Buttons -->
+    <div class="floating-controls">
+        <a href="https://wa.me/919922010640?text=Hi!%20I'm%20RSVPing%20for%20Akansha%20and%20Swapnil's%20wedding!"
+            target="_blank" class="float-btn whatsapp-btn" aria-label="WhatsApp RSVP">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+        </a>
+        <button id="musicToggleBtn" class="float-btn music-btn playing" aria-label="Toggle Music">
+            <span class="music-bars"><i></i><i></i><i></i></span>
+        </button>
+    </div>
+
+    <!-- Cinematic Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-content fade-in-up">
+            <p class="blessings-text">Together with the blessings of our parents</p>
+            <div class="couple-names">
+                <h1 class="name">Akanksha</h1>
+                <span class="ampersand">&</span>
+                <h1 class="name">Swapnil</h1>
+            </div>
+            <p class="tagline">Two hearts. Two families. One beautiful journey. </p>
+            <div class="date-box">
+                <span class="date">04 OCTOBER 2026</span>
+            </div>
+            <button id="openInviteBtn" class="primary-btn">
+                OPEN INVITATION 
+            </button>
+            <p class="music-hint">Clicking will also play background music </p>
+        </div>
+    </section>
+
+    <div class="main-content-wrapper" id="mainContent">
+        <!-- Welcome & Countdown Section -->
+        <section class="welcome section-padding" id="invitation">
+            <div class="container reveal">
+                <h2 class="section-title">You're Invited</h2>
+                <div class="welcome-card">
+                    <p class="invite-text">
+                        "With the blessings of our parents,<br>
+                        we invite you to celebrate our special day with us." 
+                    </p>
+
+                    <div class="countdown-wrapper">
+                        <h3>Our Wedding Countdown</h3>
+                        <div class="countdown" id="countdown">
+                            <div class="time-box">
+                                <span class="time-val" id="days">00</span>
+                                <span class="time-label">Days</span>
+                            </div>
+                            <div class="time-box">
+                                <span class="time-val" id="hours">00</span>
+                                <span class="time-label">Hrs</span>
+                            </div>
+                            <div class="time-box">
+                                <span class="time-val" id="minutes">00</span>
+                                <span class="time-label">Mins</span>
+                            </div>
+                            <div class="time-box">
+                                <span class="time-val" id="seconds">00</span>
+                                <span class="time-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider">
+                        <span class="diamond"></span>
+                        <span class="line"></span>
+                        <span class="diamond"></span>
+                    </div>
+                    <div class="parents-blessings">
+                        <div class="family-side">
+                            <h3>Bride's Parents</h3>
+                            <p>Sudhir & Vandana</p>
+                        </div>
+                        <div class="family-side">
+                            <h3>Groom's Parents</h3>
+                            <p>Gajanan & Meera</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Couple Story Section -->
+        <section class="story section-padding" id="story">
+            <div class="container reveal">
+                <div class="story-header">
+                    <h2 class="section-title">Our Arrange to Love Marriage Story </h2>
+                    <h3 class="story-subheading">आकांक्षा & स्वप्निल</h3>
+                    <p class="story-tagline">Two hearts. Two families. One beautiful journey. </p>
+                </div>
+
+                <div class="story-card">
+                    <p class="marathi-text text-center">
+                        कधी कधी आयुष्याची सर्वात सुंदर सुरुवात प्रेमाच्या शोधातून होत नाही…<br>
+                        ती होते कुटुंबांच्या विश्वासातून, संस्कारांतून आणि एका सुंदर भेटीतून. 
+                    </p>
+
+                    <div class="story-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">23•03•2026</div>
+                            <div class="timeline-content marathi-text">
+                                <p><strong>आकांक्षा आणि स्वप्निल यांची पहिली भेट झाली…</strong><br>
+                                    एक पारंपरिक Arrange Marriage ची भेट, जिथे दोन अनोळखी व्यक्ती एकमेकांना जाणून
+                                    घेण्यासाठी समोरासमोर आले. ती भेट फक्त एक “पहिली भेट” नव्हती… ती होती दोन
+                                    आयुष्यांच्या नव्या प्रवासाची पहिली पायरी. </p>
+                                <p>काही भेटी क्षणभराच्या असतात, पण काही भेटी आयुष्यभराच्या आठवणी बनतात. त्या एका भेटीतून
+                                    संवाद सुरू झाला, संवादातून समजूतदारपणा वाढला, आणि हळूहळू दोन मनांमध्ये एक सुंदर नातं
+                                    निर्माण झालं. </p>
+                                <p>दोन्ही कुटुंबांचे संस्कार, विचार, आपुलकी आणि परस्परांचा विश्वास… या सगळ्या सुंदर
+                                    बंधांनी या नात्याला अधिक घट्ट केलं.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">12•04•2026<br><span>Engagement Day </span></div>
+                            <div class="timeline-content marathi-text">
+                                <p>आणि मग आला तो खास दिवस… दोन्ही कुटुंबांच्या प्रेमाने, संमतीने आणि आशीर्वादाने आम्ही
+                                    एकत्र आयुष्य जगण्याच्या दिशेने पहिलं पाऊल टाकलं.</p>
+                                <p>तो फक्त Engagement चा दिवस नव्हता… तो होता “मी” पासून “आपण” होण्याचा दिवस. Two
+                                    hearts, one beautiful journey. </p>
+                                <p>Arrange Marriage म्हणून सुरू झालेली ही गोष्ट, हळूहळू ओळखीपासून मैत्रीकडे, मैत्रीतून
+                                    प्रेमाकडे, आणि प्रेमातून आयुष्यभराच्या सोबतीकडे प्रवास करू लागली.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">Forever<br><span>We Become One </span></div>
+                            <div class="timeline-content marathi-text">
+                                <p>आता या सुंदर नात्याला तुमच्या प्रेमळ आशीर्वादांसमोर, तथागत गौतम बुद्धांच्या
+                                    विचारांच्या साक्षीने आणि डॉ. बाबासाहेब आंबेडकरांच्या समता, स्वातंत्र्य आणि
+                                    मानवतेच्या मूल्यांना मनाशी धरून, आम्ही आयुष्यभरासाठी एकमेकांचे होण्याच्या उंबरठ्यावर
+                                    आहोत. </p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="quote text-center">
+                        "From a beautiful arranged beginning to an endless love story. "
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Events Timeline Section -->
+        <section class="events section-padding" id="events">
+            <div class="container reveal">
+                <h2 class="section-title">Wedding Functions </h2>
+
+                <div class="events-grid">
+                    <!-- Event 1: Haldi -->
+                    <div class="event-card">
+                        <h3>Haldi</h3>
+                        <p class="event-date">03 October 2026 | 01:00 PM Onwards</p>
+                        <p class="event-venue">SAKHUMAI NIWAS.<br>Balode Layout, Near Hinglaj Mata Mandir, Kaulkhed
+                            Road, Hingna Fata, Akola.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn-outline add-cal">Add to Calendar</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 2: Baraat -->
+                    <div class="event-card">
+                        <h3>Baraat</h3>
+                        <p class="event-date">03 October 2026 | 06:30 PM Onwards</p>
+                        <p class="event-venue">SAKHUMAI NIWAS.<br>Balode Layout, Near Hinglaj Mata Mandir, Kaulkhed
+                            Road, Hingna Fata, Akola.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn-outline add-cal">Add to Calendar</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 3: Wedding -->
+                    <div class="event-card main-event">
+                        <h3>The Wedding</h3>
+                        <p class="event-date">Sunday, 04 October 2026 | 07:15 PM</p>
+                        <p class="event-venue">Vyankatesh Lawns & Mangal Karyalaya<br>Near Bus Stand, Borgaon Manju,
+                            Borgaon, Akola, Maharashtra 444102</p>
+                        <div class="event-actions">
+                            <a href="https://share.google/Hsj7E6KLipl00rOTt" target="_blank"
+                                class="primary-btn map-btn">Google Maps</a>
+                            <a href="#" class="btn-outline add-cal">Add to Calendar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery section-padding" id="gallery">
+            <div class="container reveal">
+                <h2 class="section-title">A Glimpse of Us </h2>
+                <div class="photo-grid">
+                    <img src="engagement_1.jpg" alt="Engagement Portrait" class="gallery-img">
+                    <img src="engagement_2.jpg" alt="Engagement Ceremony" class="gallery-img">
+                    <img src="engagement_3.jpg" alt="Engagement Ceremony" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & Contact Section -->
+        <section class="rsvp section-padding" id="contact">
+            <div class="container reveal">
+                <div class="rsvp-card">
+                    <h2 class="section-title">"With the blessings of our parents,
+                        we invite you to celebrate our special day with us." </h2>
+                    <p class="rsvp-tagline">Please let us know you're coming by contacting us.</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-person">
+                            <h4>Bride</h4>
+                            <a href="tel:+919309865083">93098 65083</a>
+                        </div>
+                        <div class="contact-person">
+                            <h4> Family</h4>
+                            <a href="tel:+919922010640">99220 10640</a>
+                        </div>
+                        <div class="contact-person">
+                            <h4>Groom</h4>
+                            <a href="tel:+917507501490">75075 01490</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal popup-footer">
+            <p class="footer-names">Akanksha & Swapnil</p>
+            <p class="footer-hashtag">#AKANKSHAWEDSSWAPNIL</p>
+            <p class="footer-date">04 . 10 . 2026</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
