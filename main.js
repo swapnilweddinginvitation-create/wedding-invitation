@@ -66,7 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     musicToggleBtn.addEventListener('click', toggleMusic);
 
-    openInviteBtn.addEventListener('click', () => {
+    let hasOpened = false;
+
+    function openInvitation() {
+        if (hasOpened) return;
+        hasOpened = true;
+
         // Slide up hero section
         heroSection.classList.add('slide-up');
         
@@ -96,7 +101,16 @@ document.addEventListener('DOMContentLoaded', () => {
             heroSection.style.display = 'none';
             window.scrollTo(0, 0);
         }, 1000);
-    });
+    }
+
+    openInviteBtn.addEventListener('click', openInvitation);
+
+    // Auto open after 5 seconds
+    setTimeout(() => {
+        if (!hasOpened) {
+            openInvitation();
+        }
+    }, 5000);
 
     // 3. Scroll Reveal Animation
     function reveal() {
@@ -131,8 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Scroll down continuously by a small amount per frame (Speed increased)
-            window.scrollBy(0, 2.5);
+            // Scroll down continuously by a small amount per frame
+            // Increased speed for mobile (Android) views, adjusted to be slower as requested
+            const scrollSpeed = window.innerWidth <= 768 ? 1.5 : 2.5;
+            window.scrollBy(0, scrollSpeed);
             
             autoScrollFrame = requestAnimationFrame(scrollLoop);
         }
@@ -170,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (distance < 0) {
             clearInterval(countdownTimer);
-            document.getElementById('countdown').innerHTML = "<h3 style='color:var(--clr-primary);'>We are Married! 🎉</h3>";
+            document.getElementById('countdown').innerHTML = "<h3 style='color:var(--clr-primary);'>We are Married!</h3>";
             return;
         }
 
